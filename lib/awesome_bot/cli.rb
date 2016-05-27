@@ -94,9 +94,9 @@ module AwesomeBot
       puts "> White list links matching: #{white_listed.join ', '} " unless white_listed.nil?
 
       options = {
-        'whitelist' => white_listed,
         'allowdupe' => skip_dupe,
-        'timeout' => timeout
+        'timeout'   => timeout,
+        'whitelist' => white_listed
       }
       r = check content, options do |o|
         print o
@@ -116,9 +116,9 @@ module AwesomeBot
       allow_timeouts = false if allow_timeouts.nil?
 
       options = {
-        'redirect'=>allow_redirects,
-        'ssl'=>allow_ssl,
-        'timeout'=>allow_timeouts
+        'redirect' => allow_redirects,
+        'ssl'      => allow_ssl,
+        'timeout'  => allow_timeouts
       }
 
       if r.success(options) == true
