@@ -78,7 +78,7 @@ module AwesomeBot
       {
         'date'=>Time.now,
         'links'=>@links,
-        'results'=>statuses_issues(nil)
+        'results'=>statuses_issues
       }
     end
   end # class
